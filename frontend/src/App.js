@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  BrowserRouter,
+  Link
 } from "react-router-dom";
 import Me from "./components/Me";
 import All from "./components/All";
