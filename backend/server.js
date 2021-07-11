@@ -1,14 +1,11 @@
-const { json } = require("body-parser");
 const express = require("express");
-const app = express();
-var cors = require("cors");
+const cors = require("cors");
 
 require("dotenv").config();
 
+const app = express();
+
 app.use(cors());
-
-const PORT = process.env.PORT || 5000;
-
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -17,6 +14,7 @@ app.get("/", (req, res) => {
   });
 });
 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`connecte au port ${PORT}`);
 });

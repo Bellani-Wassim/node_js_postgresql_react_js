@@ -1,18 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-const All = () => {
-  const fetchData = async () => {
-    const mssg = await window
-      .fetch("http://localhost:9674/")
-      .then((m) => m.json())
-      .then((n) => console.log(n));
-    return mssg;
-  };
-  return (
+const All = () => 
     <div>
-      <button onClick={fetchData}></button>
-    </div>
-  );
-};
+      <button onClick={
+        async () => await window
+        .fetch("http://localhost:5000/")
+        .then((m) => m.json())
+        .then((n) => console.log(n))
+      }>Test</button>
+    </div>;
 
 export default All;
